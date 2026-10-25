@@ -1,0 +1,44 @@
+                                    Virtual Machine
+                                        -----------> EC2 in AWS
+                                        -----------> Compute Engine in GCP
+
+AWS
+1. tags                                                     tags
+2. AMI                                                       image
+3. Instance type                                             VM size
+4. key pairs                                                 key pairs + password
+5. Firewall / security group                                 Inbound port rule / nsg
+6. Storage (HDD, SSD)                                        OS disk
+
+**Availability options:
+1. Availability zone:
+--> your VM is placed in a specific zone.
+--> you can place other VMs in other zones to protect your app
+--> use this option for high availabity 
+
+2. NO Infrastructure redudancy required:
+--> your VM is placed anywhere in the data center.
+--> no special protection if that part of azure fails
+--> use when simple setup is required
+
+** OS disk type:
+1. Standard HDD:
+--> cheap, basic and slower
+--> used in dev/test VMs
+
+2. Standrd SSD:
+--> Balanced cost and performance
+--> used in web servers, basic applications
+
+3. Premium SSD:
+--> High performance, low latency
+--> used in databases, production apps
+
+**Extension:
+--> extensions are small tools or add ons that you can use to install applications on your VM
+--> entensions in azure are like automation tools for VMs. insted of logging into each VM and
+typing commands you can use extensions to do task for you.
+
+**extension vs custome data
+--> IF you want to setup something right as the VM is being born use custome data.
+--> if you want to change or update something on an already runnning VM use extension.
