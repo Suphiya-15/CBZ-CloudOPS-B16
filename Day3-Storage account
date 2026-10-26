@@ -1,0 +1,31 @@
+                                 Storage Acccount
+                                      -----------> Storage service in AWS
+--> AWS has seperate storage services Azure groups them under one thing called
+"Storage account"
+--> create one storage account and use multiple services
+
+         AWS                                  Azure
+         S3                                   Blob Storage
+         EFS                                  Azure File
+         SQS                                  Azure Queue
+         Dynamodb                             Azure Table 
+
+                             Blob Storage
+                                --------> S3 in AWS
+
+--> in Blob storage data stored in container.
+(AWS : Bucket ----> Azure : Container)
+(AWS : Objects ----> Azure : Blob)
+--> blob storage is non bootable service
+--> min and max capacity of object is 0 byte to  190TB
+--> (AWS --> Storage Classes  Azure --> Access tier)
+--> Azure access tiers:
+1. Hot tier 
+--> best for frequently accessd data 
+2. Cool tier:
+--> best for infrequently accessed data
+3. Cold tier:
+--> best for rarely accessed data 
+--> min 90 days
+4. Archive tier:
+--> Best for long lived data 
