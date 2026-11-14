@@ -1,0 +1,13 @@
+
+            Azure Snapshot vs Backup Vault vs Recovery Services Vault
+
+--> These three concepts are related to Azure data protection, but they serve
+different purposes.
+
+The main difference is:
+
+1. Snapshot: Captures the state of a disk at a particular point in time.
+2. Backup Vault: Stores and manages backups for supported Azure resources using
+Azure Backup.
+3. Recovery Services Vault: Stores and manages backups for Azure VMs, Azure Files,
+SQL Server workloads, and supports Azure Site Recovery scenarios.

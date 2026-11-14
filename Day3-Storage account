@@ -29,3 +29,29 @@
 --> min 90 days
 4. Archive tier:
 --> Best for long lived data 
+
+**Redundancy:
+--> Redundancy means how many copies of your data azure keeps and where they are stored.
+1. LRS: Locally Redundant Storage
+--> Azure keeps 3 copies of your data.
+--> all in one data center
+--> cheapest option
+--> if data center fails --> data loss
+
+2. ZRS: Zone-Redundant Storage
+--> data stores in 3 zones within 1region
+--> each zone --> 1 copy
+--> survives zone failure
+--> reliable than LRS
+
+3. GRS: Geo Redundant Sorage
+--> azure keeps total 6 copies of your data.
+--> azure store 3 copies locally + 3 copies in another region
+--> you can not access the secondary unless failover is done
+--> useful for disaster recovery
+
+4. GZRS: Geo-Zone Redundant Storage
+--> Combines ZRS + GRS
+--> keeeps total 6 copies of your data.
+--> stored 3 copies in primary region (ZRS) + 3 copies in another region (ZRS)
+

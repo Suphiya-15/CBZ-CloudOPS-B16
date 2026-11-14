@@ -1,0 +1,11 @@
+                             Monitor
+                                  -----> Cloudwatch in AWS
+
+--> Azure Monitoring is the process of collecting, analyzing, and acting on telemetry (metrics, logs, traces, and events) from Azure resources, applications, and infrastructure to ensure availability, performance, security, and reliability.
+
+**Important components of Azure Monitor:
+1. Metrics
+2. Logs
+3. Alerts
+
+

@@ -1,0 +1,21 @@
+                         Virtual Network
+                            (Vnet)
+                              -----------> VPC in AWS
+
+CIDR??
+10.0.0.0/24 : ___ IP addresses : 265
+10.0.0.0/20 : ___ IP addresses : 4096
+
+512 servers CIDR??
+/23
+
+64 servers CIDR?
+/26
+
+AWS Direct connect in aws ------> ExpressRoute in Azure
+
+--> ExpressRoute is a private, dedicated connection between your on-premises network and microsoft azure
+--> it does not travel through the inetrnet.
+
+AWS site to site VPN in AWS ----> VPN Gateway in AWS
+

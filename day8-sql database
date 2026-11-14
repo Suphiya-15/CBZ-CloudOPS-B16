@@ -1,0 +1,30 @@
+                        SQL Database
+                           ----------> RDS in AWS
+
+    AWS = Supports many engines (MySQL, Oracle, MAriadb)
+    Azure = focused on SQL server only (Microsoft product)
+
+    SQL server:
+    --> It is simply a logical container
+    --> It is like container that manages one or more databases
+    --> It contains:
+    1. sql server login credentials
+    2. firewall rules
+    3. security settings
+    4. databases
+
+    why we need this?
+    --> insted of configuring security seperatey for every database, 
+    Azure store many settings at the sql server.
+    eg: firewall, IAM
+
+                      Azure Function
+                           ----------> Lambda in AWS
+
+    --> Azure function is a serverless compute service in Microsoft Azure.
+    --> Azure function is used when
+    1. you want to run small task automatically
+    2. you dont want to manage server
+    3. you only oay for the time your code runs.
+
+    

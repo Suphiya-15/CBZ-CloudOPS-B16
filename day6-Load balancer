@@ -1,0 +1,25 @@
+                        Load Balancer
+                             -------> ELB in AWS
+                
+--> Azure Load Balancer is a Layer 4 (TCP/UDP) load-balancing service that
+distributes incoming network traffic across multiple backend resources, such as Azure Virtual Machines.
+--> Its main purpose is to provide high availability, scalability, and 
+better application performance by distributing traffic across healthy
+backend servers.
+
+**Types of Azure Load Balancer
+Azure provides different load-balancing services for different requirements.
+
+Azure Load Balancer Logo Vector PNG | Microsoft Azure Traffic Distribution Icon  - freepng
+ 
+1. Azure Load Balancer
+--> Layer 4 (TCP/UDP).
+--> Distributes network traffic.
+--> Supports internal and external load balancing.
+--> Suitable for VM-based applications.
+ 
+2. Azure Application Gateway
+--> Layer 7 (HTTP/HTTPS).
+--> Supports URL-based routing.
+--> Supports SSL termination.
+--> Includes Web Application Firewall (WAF).

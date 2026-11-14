@@ -1,0 +1,118 @@
+                        Interview questions
+
+1. What is a Resource Group?
+--> A Resource Group is a logical container used to organize and manage Azure resources.
+Example: A resource group can contain:
+Virtual Machines
+Virtual Networks
+Storage Accounts
+Network Interfaces
+Public IP addresses
+
+2. What is an Azure Subscription?
+--> An Azure Subscription is a logical boundary for resource management, billing, and access control.
+
+3. What is an Azure Virtual Machine?
+--> An Azure VM is a virtual server hosted on Microsoft Azure infrastructure. It can run Windows or Linux operating systems.
+
+4. What are the important components of an Azure VM?
+--> Operating System Disk
+Data Disk
+Network Interface
+Virtual Network
+Subnet
+Public IP (optional)
+Network Security Group
+
+5. How do you connect to an Azure Windows VM?
+--> Using Remote Desktop Protocol (RDP), usually over TCP port 3389, with appropriate network access and credentials.
+
+6. How do you connect to an Azure Linux VM?
+--> Using SSH, usually over TCP port 22.
+
+7. What will you do if an Azure VM is not accessible?
+-->My troubleshooting approach:
+Check VM power state.
+Check Boot Diagnostics.
+Check Network Security Group rules.
+Verify public or private IP.
+Check route tables.
+Verify RDP or SSH connectivity.
+Check Azure Firewall or other network appliances.
+Use Network Watcher Connection Troubleshoot.
+Check operating system firewall and services.
+
+8. What is VM resizing?
+--> VM resizing means changing the VM size to increase or decrease CPU, memory, and other compute capabilities.
+
+9. What is an Availability Set?
+--> An Availability Set distributes VMs across fault domains and update domains to reduce the impact of hardware failures and planned maintenance.
+
+10. What is VM Scale Set?
+--> Azure Virtual Machine Scale Sets allow you to deploy and manage a group of load-balanced VMs that can scale automatically or manually.
+
+11. What is a Virtual Network (VNet)?
+--> A VNet is a logically isolated network in Azure that allows Azure resources to communicate securely.
+
+12. What is a Subnet?
+--> A subnet is a smaller network segment inside a VNet.
+Example:
+VNet: 10.0.0.0/16
+Web subnet: 10.0.1.0/24
+App subnet: 10.0.2.0/24
+Database subnet: 10.0.3.0/24
+
+13. What is an NSG?
+--> A Network Security Group controls inbound and outbound network traffic using security rules based on source, destination, ports, protocols, and priority.
+
+14. What is VNet Peering?
+--> VNet Peering connects two Azure virtual networks so resources can communicate using private IP addresses over Microsoft's backbone network.
+
+15. What is VPN Gateway?
+--> VPN Gateway establishes encrypted connectivity between Azure VNets and other networks, such as on-premises datacenters.
+
+16. What is ExpressRoute?
+--> ExpressRoute provides private connectivity between on-premises infrastructure and Microsoft cloud services through a connectivity provider.
+
+17. What is Azure Load Balancer?
+--> Azure Load Balancer is a Layer 4 service that distributes TCP and UDP traffic across backend resources.
+
+18. What is an Azure Storage Account?
+--> It is a storage service that provides different types of cloud storage.
+
+19. What are the four main Azure Storage services?
+--> Blob Storage – Stores unstructured data.
+File Storage – Managed file shares.
+Queue Storage – Stores messages.
+Table Storage – NoSQL key-value storage.
+
+20. What are the different Blob Storage access tiers?
+--> Hot – Frequently accessed data.
+Cool – Infrequently accessed data.
+Cold – Rarely accessed data.
+Archive – Long-term offline storage.
+
+21. What is LRS, ZRS, GRS and GZRS?
+-->Type                                        Description
+LRS                                     Locally Redundant Storage
+ZRS                                         Zone-Redundant Storage
+GRS                                         Geo-Redundant Storage
+GZRS                                    Geo-Zone-Redundant Storage
+
+22. What is the difference between Azure Files and Blob Storage?
+-->Azure Files provides managed file shares accessible through SMB or NFS.
+--> Blob Storage is designed for unstructured object data such as images, videos, documents, and backups.
+
+23. What is Azure Backup?
+--> Azure Backup is a managed service used to protect data and recover it after accidental deletion, corruption, or other data-loss events.
+
+24. What is Recovery Services Vault?
+--> It is a management and storage entity used for Azure VM backups and other supported workloads, and it integrates with Azure Site Recovery.
+
+25. What is Backup Vault?
+--> Backup Vault is an Azure resource used to manage backups for supported workloads such as managed disks and other Azure data services.
+
+26. Difference between Snapshot and Backup?
+--> Snapshot: Point-in-time copy of a disk.
+--> Backup: Managed data-protection solution with policies, retention and recovery capabilities.
+

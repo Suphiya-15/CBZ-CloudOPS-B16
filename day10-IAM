@@ -1,0 +1,23 @@
+                           Microsoft EntraID
+                                 ----------> IAM in AWS
+
+--> Microsoft Entra ID is Microsoft's cloud-based Identity and Access Management (IAM) service. It helps organizations manage users, groups, devices, applications, and access permissions securely.
+--> Previously, Microsoft Entra ID was called Azure Active Directory (Azure AD). Microsoft renamed Azure AD to Entra ID in 2023
+
+**Important Components of Microsoft Entra ID
+1. Users
+--> Represents employees, administrators, and guest users.
+Example: admin@company.com
+ 
+2. Groups
+--> Organize users and assign permissions collectively.
+Example: DevOps-Team, Azure-Admins.
+
+3. MFA (Multi-Factor Authentication)
+--> Requires additional verification during sign-in, such as an authenticator app.
+
+4. Conditional Access
+--> Controls access based on user, location, device compliance, application and risk conditions.
+ 
+5. Roles and Administrators
+--> Assign administrative permissions using roles such as Global Administrator, User Administrator and Application Administrator.
