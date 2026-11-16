@@ -1,0 +1,55 @@
+                            Shell scripting
+
+Console vs Terminal vs Shell
+
+1. Console : A system level interface through which you access and manage computer.
+(Physical device)
+
+2. Terminal : A place where you type command and see their output.
+
+3. Shell: which interprets your command
+
+**Different type of shell:
+1. Bash (Bourne again Shell)
+2. SH (Bourne Shell)
+3. KSH (Kron Shell)
+4. CSH (C Shell)
+5. ZSH (Z Shell)
+6. Fish 
+
+**How to check your current login shell:
+echo $SHELL  -----> /bin/bash
+OR
+echo $0 -------> -bash
+
+cat /etc/shells 
+--> to check all available shells your system suppport
+
+Shell scripting:
+--> Shell scripting is the process of writing multiple commands in a file and execute them togather to automate task.
+--> shell scripting consists of set of commands to perform specific task
+--> all commands execute sequentially.
+
+**Shebang Line:
+--> Shebang line is the first line of a script tell the OS which interpreter should be used to execute that script.
+eg:
+   #!/bin/bash
+shebang refers to #!
+--> in musical notation # called sharp and ! called bang
+--> hash and bang called shebang 
+--> shebang specifiy the interpreter
+--> It is usedto instruct the OS to use bash as a interpreter.
+
+** How to run script:
+1. ./<script_name>
+--> if you are in teh same directory as the script use relative path
+
+2. /path/<script_name>
+--> if you are in different directory use absolute path
+
+3. bash <script_name>
+--> you are explicitly tell the OS to execute the script usinf specific interpreter even if it does not have permission or a shebang line.
+
+
+
+
