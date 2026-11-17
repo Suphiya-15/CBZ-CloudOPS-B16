@@ -1,0 +1,64 @@
+                            Shell scripts
+
+script 1 : basic
+
+#!/bin/bash
+echo "Hello..! Welcome to Cloudblitz.."
+---------------------------------------------------------------------------------
+
+script 2 : variables
+
+#To access variable use $ with variable name
+
+#!/bin/bash
+a=10
+name="seema"
+age=25
+
+echo "Name is $name and age is $age"
+
+----------------------------------------------------------------------------------
+Script 3 : Constant Variable
+
+#use readonly keyword for constant variable
+
+#!/bin/bash
+college="Metro"
+echo "College Name is $college"
+
+college="XYZ"
+echo "College Name is $college"
+
+----------------------------------------------------------------------------------
+Script 4 : Comments
+
+#use # for single line comment
+#use << for multi line comment
+
+#!/bin/bash
+echo "Cheaking comments"
+#this is single line comment
+
+echo "Checking multiline comment"
+<<comment
+this 
+is 
+multi
+line
+comment
+
+----------------------------------------------------------------------------------
+
+Script 5 : user input
+
+echo "Enter your Name:"
+read name
+
+echo "Name is $name"
+
+------------------------------------------------------------------------------
+
+Script 6 : argument passing
+
+
+
