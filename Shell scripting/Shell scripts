@@ -219,3 +219,83 @@ do
     echo "Value of a is $a"
     let a--
 done
+
+-----------------------------------------------------------------------------
+
+Script 20: read file
+
+#!/bin/bash
+
+filename="demo.txt"
+filecontents=$(cat $filename)
+echo "File Contents:"
+echo "$filecontents"
+
+-----------------------------------------------------------------------------
+
+Script 21 : read file using loop
+
+#!/bin/bash
+
+echo "Enter file name:"
+read filename
+
+for data in $(cat $filename)
+do
+      echo "Name is: $data"
+done
+
+--------------------------------------------------------------------------------
+
+Script 22: write to a file
+# > : add data or overwrite data
+# >> : append new data
+#!/bin/bash
+echo "This is sample file created using shell scripting" >file.txt
+#to append
+echo "This  is new line" >>file.txt
+
+---------------------------------------------------------------------------
+
+Script 23: user input
+
+#!/bin/bash
+echo "Enter filename:"
+read filename
+
+echo "Enter data:"
+read data
+
+echo "$data" >>$filename
+
+---------------------------------------------------------------------------
+Script 24 : EOF ---> here document
+
+#!/bin/bash
+
+cat <<EOF >> test.txt
+this  is first line
+this is second line
+this is third line
+EOF
+
+#EOF indicated a here document where EOF is the demilmeter
+#everything between two EOF goes into test.txt
+
+------------------------------------------------------------------------------
+Script 25: 
+#!/bin/bash
+
+echo "Enter data and press ctrl+d when finished"
+cat > myfile.txt
+echo "File created successfully.."
+
+----------------------------------------------------------------------------
+ HW Script 26: server report
+ 1. hostname
+ 2. memory info
+ 3. uptime
+ 4. disk info
+ ---------> server_report.txt
+
+ ---------------------------------------------------------------------------
