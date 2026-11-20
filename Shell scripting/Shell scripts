@@ -60,5 +60,162 @@ echo "Name is $name"
 
 Script 6 : argument passing
 
+#argument passing means giving some values to a shell script when we run the script.
+#Positional paramaters
 
+variable            meaning
+   $0             script name
+   $1             First argument
+   $2             Second argument
+   $3             third argument
+   $#             no of argument
+   $@             All arguments
 
+   #!/bin/bash
+
+   echo "First argument is: $1"
+   echo "Second argument is: $2"
+   echo "Third argument is: $3"
+   echo "All arguments are: $@"
+   echo "No of arguments: $#"
+
+   -----------------------------------------------------------------------------------------------------
+    script 7 : devops script
+
+    #!/bin/bash
+
+    cp $1 $2 
+    echo "file copied successfully"
+
+    ----------------------------------------------------------------------------------------------------
+  Script 8 : commmand substitution
+  #command substitution is a feature that allow us to execute a command and store
+  #or use its output inside script
+  #syntax: variable=$(commmand)
+
+  today=$(date)
+  echo "Todays Date is :$today"
+  echo "Your current working directory is $(pwd)" 
+
+  ----------------------------------------------------------------------------
+  Script 9 : if-else-block
+
+  --------------------------------------------------------------------------
+  Script 10: file example
+
+  #!/bin/bash
+  
+  file="demo.txt"
+
+  if [ -f file ]
+  then   
+        echo "File exist.."
+    else
+        echo "File not found.."
+  fi    
+
+  --------------------------------------------------------------------------
+
+  script 11: devops script
+
+  #!/bin/bash
+
+  if [ $(id -u) -ne 0 ]
+  then
+       echo "you must run this script as a root user"
+  else
+       echo "you are root. script can continue.."
+ fi
+
+--------------------------------------------------------------------------
+Script 12:
+#!/bin/bash
+echo "Enter username:"
+read username
+echo "Enter password:"
+read password
+
+if [ $username = "admin" ]
+then
+    if [ $password = "admin123" ]
+    then
+        echo "Login Successful"
+        else
+        echo "Incorrect Password"
+    fi
+else
+    echo "Invalid username"
+fi
+----------------------------------------------------------------------------
+Script 13: 
+
+----------------------------------------------------------------------------
+Script 14:
+#!/bin/bash
+for server in web1 web2 web3
+do 
+     echo "Checking $server"
+done
+
+-------------------------------------------------------------------------
+Script 15: create multiple users using for loop
+
+#!/bin/bash
+for user in seema atul mahesh
+do
+       sudo useradd $user
+       echo "$user user created"
+done
+
+--------------------------------------------------------------------------
+
+Script 16 : while loop
+
+#!/bin/bash
+i=1
+
+while [ $i -le 5 ]
+do
+      echo "Number is $i"
+      let i++
+done
+
+--------------------------------------------------------------------------
+
+Script 17: password checker
+
+#!/bin/bash
+password="linux"
+input=""
+
+while [ $input != $password ]
+do
+       echo "Enter Password:"
+       read input
+done
+echo "Access Granted!"
+
+---------------------------------------------------------------------------
+
+script 18: Monitoring
+
+#!/bin/bash
+
+while true
+do
+      echo "Checking disk usage.."
+      df -h /
+      sleep 3
+done
+---------------------------------------------------------------------------
+
+script 19: until loop
+
+#!/bin/bash
+a=5
+
+until [ $a -eq 1 ]
+do
+    echo "Value of a is $a"
+    let a--
+done

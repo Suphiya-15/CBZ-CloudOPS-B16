@@ -1,0 +1,101 @@
+                           Control structure
+
+--> Control Structure help us control the flow of execution of a program based on certain conditions.
+1. Conditional Statement
+--> if, if-else, if-elif-else
+2. Loops
+--> for, while, until
+
+1. conditional statement
+if-else
+--> when we want to execute one block if the condition is true and another block if condition is false.
+syntax:
+if [ condition ]
+then 
+    #commmands if condition is true
+else
+    #commands if condition is false
+fi 
+
+**Common Operators and conditions:
+
+1. Numrical Operators:
+
+    Operators                       Meanings
+    -eq                              equal to 
+    -ne                              not equal to
+    -gt                              grater than
+    -lt                              less than
+    -ge                              grater than equal to
+    -le                              less than equal to
+
+2. String opertors
+
+   Operators                         Meaning
+    =                                equal
+    !=                              not equal
+    -z                              string is empty
+    -n                              string is not empty
+
+3. File operators
+
+  Operators                          Meaning
+    -f                              regular file exists
+    -d                              directory exists
+    -e                              file/dir exists
+
+                  
+                              **Loops**
+
+--> A loop is a control structure that allow us to execute block of code repeated
+until certain condition is met.
+--> loop types:
+1. For Loop
+2. While Loop
+3. Until Loop
+
+1. For Loop:
+--> A for loop is used when we want to execute commands for a fixed number 
+of times or iterate through a list of items.
+eg:
+
+for i in 1 2 3 4 5
+do 
+      echo "Number is $i"
+done
+
+here,
+for i : create a variable name i
+in 1 2 3 4 5 : provide the list of values
+do : start the loop body
+echo : prints the current value
+done : ends the loop
+
+2. while loop:
+--> A while loop executes commands repeatedly as long as the given condition is TRUE.
+syntax:
+while [ condition ]
+do
+      #commmands
+done
+
+3. until loop:
+--> An until loop executes commmands repeatedly until the given condition becomes TRUE.
+--> codition false --> execute commands
+--> condition true --> stop the loop
+syntax:
+until [ condition ]
+do
+    #commands
+done
+
+
+
+
+
+
+
+
+
+
+    
