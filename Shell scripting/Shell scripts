@@ -299,3 +299,35 @@ echo "File created successfully.."
  ---------> server_report.txt
 
  ---------------------------------------------------------------------------
+Script 27: Basic function
+
+greet()
+{
+    echo "Hello..! Welcome to Cloudblitz.."
+}
+
+greet
+greet
+
+-----------------------------------------------------------
+
+script 28: function with arguments
+
+#!/bin/bash
+greet()
+{
+    echo "Hello $1..! Welcome to Cloudblitz.."
+}
+
+greet Seema
+greet Atul  
+
+-----------------------------------------------------------
+
+Script 29: Server information
+Script 30: argument passing to function
+Script 31: return value from function
+Script 32: Devops script
+
+----------------------------------------------------------------
+Script 33: case statement

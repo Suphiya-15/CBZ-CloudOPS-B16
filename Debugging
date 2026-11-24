@@ -1,0 +1,19 @@
+                     Debugging
+
+--> debugging is a process of finding, understanding and 
+    fixing errors or problems in a script.
+
+set -x: debugging mode
+
+--> it displays each command on the terminal before bash executes it.
+--> this helps us to understand what command are runnning 
+and what values are being passed to them.
+
+
+set -e: exit when a command fails.
+
+--> set -e tells bash to exit the script when a command fails, in situation
+where the option applies.
+--> it prevents the script from continuing with the next commandafter an unexpected failure.
+
+

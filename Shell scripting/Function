@@ -1,0 +1,32 @@
+                        Function
+
+--> A function is a block of commands that performs 
+a spesific task and can be reused multiple times by calling its name.
+--> syntax:
+function_name()
+{
+     #commands
+}
+
+syntax 2:
+function function_name
+{
+    #commands
+}
+
+To call the function:
+function_name
+
+**Function with arguments:
+--> WE can pass values to a function justblike we pass arguments
+to a shell script.
+
+**Return value in function:
+--> A return value in a function is a value or result that a function
+gives back to the part of the script.
+--> in bash a function can provide a result in a two ways:
+1. return --> return an exist status 
+2. echo --> sends output that we capture
+
+
+

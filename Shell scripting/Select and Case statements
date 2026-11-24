@@ -1,0 +1,43 @@
+                     Case Statements
+
+--> Case Statements checks a variable against multiple patterns.
+--> when a pattern matches, the curresponding commands are executed
+Syntax:
+
+case variable in
+pattern1)
+        commands
+        ;;
+patter2)
+        commands
+        ;;
+pattern3)
+        commands
+        ;;
+*)
+   deafult_commands
+        ;;
+esac
+
+here,
+case : start the case Statement
+variable : value to check
+pattern) : pattern to matches
+;; : Ends the current case
+* : matches the value
+   (default case)
+esac : ends the case Statement (esac is case written backword) 
+
+                   **Select Statement**
+
+--> The select statement in bash is used to create menu driven program.
+--> it displays a list of options.
+syntax:
+select variable in option1 option2 option3
+do
+      commands
+done
+
+PS3 : 
+--> It is a special bash variable used with select statement
+--> it defines the msg that bash displays when it asks the user to select an option.
