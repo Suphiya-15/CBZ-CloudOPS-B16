@@ -325,9 +325,220 @@ greet Atul
 -----------------------------------------------------------
 
 Script 29: Server information
-Script 30: argument passing to function
-Script 31: return value from function
-Script 32: Devops script
 
-----------------------------------------------------------------
-Script 33: case statement
+#!/bin/bash
+
+server_info()
+{
+       echo "Hostname:"
+       hostname
+
+       echo "Current user:"
+       whomi
+
+       echo "Date:"
+       date
+}
+
+
+server_info
+
+-------------------------------------------------------------------------------------------------
+Script 30: disk usage
+
+#!/bin/bash
+
+check_disk()
+{
+       echo "Disk usage:"
+       df -h /
+}
+
+check_disk
+
+-------------------------------------------------------------------------------------------------
+
+script 31: argument passing in function
+
+#!/bin/bash
+
+sum()
+{
+       num1=$1
+       num2=$2
+       addition=$((num1+num2))
+       echo "Sum of $num1 and $num2 is $addition"
+}
+
+sum 100 12
+sum 45 45
+sum 34 65
+
+
+# $((..)) is used to do arithmatic operations in bash
+
+--------------------------------------------------------------------------------------------------
+
+script 32: check service
+
+#!/bin/bash
+
+check_service()
+{
+       systemctl is-active $1
+       if [ $? -eq 0 ]
+       then
+                 echo "$1 is runnning"
+              else
+                 echo "$1 is not running"
+       fi
+}
+
+check_service httpd
+check_service nginx
+check_service ssh
+check_service docker
+
+# #? means the exit status of the last executed command
+# it tells us whether the pervious command was successful or failed
+
+-----------------------------------------------------------------------------------------------------
+
+script 33: multiplication of 3 numbers using function
+
+mul()
+{
+       num1=$1
+       num2=$2
+       num3=$3
+       multiplication=$((num1*num2*num3))
+       echo $multiplication
+}
+
+result=$(mul 1 2 3)
+echo "$result"
+------------------------------------------------------------------------------------------------
+
+script 34: case statement
+
+#!/bin/bash
+
+echo "Provide Options:"
+echo "AWS"
+echo "Azure"
+echo "GCP"
+echo "Select options:"
+read choice
+
+case $choice in
+     AWS)
+      echo "You selected AWS"
+      ;;
+
+     Azure)
+      echo "You selected Azure"
+      ;;
+
+      GCP)
+      echo "You selected GCP"
+      ;;
+
+      *)
+      echo "Please enter valid Input"
+      ;;
+esac
+
+--------------------------------------------------------------------------------------------------
+
+script 35: select statement
+
+#/bin/bash
+
+select choice in AWS Azure GCP Exit 
+do
+     echo "You selected: $choice"
+done
+--------------------------------------------------------------------------------------------------
+script 36: server management tool
+
+#!/bin/bash
+PS3="Select an Option:"
+select option in "check disk" "check memory" "check CPU" "exit"
+do
+    case $option in
+         check disk) 
+                   df -h
+                  ;;
+         check memory)
+                   free -h
+                   ;;
+         check CPU)
+                   uptime 
+                  ;;
+         exit)
+              echo "Exiting server mangement tool"
+              break
+              ;;
+          *)
+             echo "Invalid Input"
+             ;;
+       esac
+done
+
+#PS3 is a special bash variable used with select statment
+#it defins the msg that bash displays when it asks the user to select an option
+
+--------------------------------------------------------------------------------------------------
+
+Script 37: Devops Backup script
+
+#!/bin/bash
+source="/mnt/demo.txt"
+dest="backups"
+log="/var/log/backup.log"
+
+timestamp=$(date +%y-%m-%d_%H-%M-%S)
+
+mkdir -p $dest
+
+tar -czf $dest/backup_${timestamp}.tar.gz $source
+
+if [ $? -eq 0 ]
+then 
+    echo "$timestamp: Backup successful" >> $log
+    else
+    echo "$timestamp: Backup failed" >> $log
+fi
+
+--------------------------------------------------------------
+Script 38: Service health check
+
+#!/bin/bash
+service_name=$1
+log="/var/log/service_health.log"
+
+check_service()
+{
+    if systemctl is-active $service_name
+    then
+        echo "$(date): $service_name is running" >> $log
+    else
+        echo "$(date): $service_name is not running. RESTARTING..." >> $log
+        systemctl restart $service_name
+
+        if [ $? -eq 0 ]
+        then
+            echo "$(date): $service_name restarted successfully" >> $log
+        else
+            echo "$(date): Failed to restart $service_name" >> $log
+        fi
+    fi
+}
+
+if [ -z $service_name ]
+then
+    echo "Please provide service name"
+    else
+    check_service
+    echo "Service status is saved in log file"
+fi
