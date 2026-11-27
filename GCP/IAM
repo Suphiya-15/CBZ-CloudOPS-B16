@@ -1,0 +1,34 @@
+                          IAM
+                Identity and Access Management
+                            -------> IAM in AWS
+                            ------> Microsoft EntraID in Azure
+
+
+**Components of GCP IAM:**
+1. Identity
+2. Resources
+3. Permission
+4. Role
+6. Policy
+
+1. Identity:
+--> who is requesting access
+eg: user, group, service account
+
+2. Role:
+--> set of permission
+--> types of role:
+----> 1. Basic role ---> admin, viewer, editor, browser
+----> 2. pre-defined role
+----> 3. custom role
+
+3. Resources:
+--> what is being accessed
+-->eg: VM, bucket
+
+4. Permission:
+--> what access is allowed
+
+5. Policy:
+--> A collection of buildings that associate roles with identities
+

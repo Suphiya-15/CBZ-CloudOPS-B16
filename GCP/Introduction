@@ -1,0 +1,40 @@
+
+**GCP Resource Hierarchy**
+--> in GCP resource hierarchy means how we organize and manage cloud resources in a structured way.
+--> GCP has four main levels:
+1. Organization
+2. Folders
+3. Projects
+4. Resources
+
+1. Organization:
+--> It represents an entire company
+eg: Cloudblitz
+
+2. Folder:
+--> A folder is used to organize projects into different departments.
+--> Each folder can contain multiple projects.
+
+3. Project:
+--> Project is the main container in which we create and amange GCP resources and services.
+
+4. Resource:
+--> Resources are the actual GCP services that we create inside a project.
+
+eg:
+CLoudblitz ----> Organization
+|
+|--->Dev --> Folder
+|.    |
+      |
+      -----> Web-application-project
+      |         |
+                |
+                ------> VM
+                ------> Bucket
+                ------> pub/sub
+      |
+      ----->Database-project
+|
+|
+--->Testing
